@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #03dfff;
+  background: url(https://images.pexels.com/photos/2736499/pexels-photo-2736499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  padding: 10px;
+  margin: 50px auto;
+}
+
+.TASK {
+  width: 600px;
+  display: flex;
+  padding: 10px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.TASK input[type="text"] {
+  width: 90%;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #666;
+  background: none;
+  padding: 10px;
+  font-size: 22px;
+  outline: none;
+}
+
+button {
+  background-color: rgb(243, 243, 243);
+  color: rgb(6, 6, 6);
+  font-size: large;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Notcompleted .completed {
+  margin: 5px 0;
+  padding: 20px;
+
+}
+
+h3 {
+  font-size: 30px;
+  color: #666;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ol {
+  list-style: none;
+  counter-reset: my-counter;
+  justify-content: center;
+
+}
+
+ol li {
+  width: 800px;
+  padding: 18px;
+  margin: 5px 0;
+  background: #e96969bb;
+  font-size: 22px;
+  counter-increment: my-counter;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+ol.completed li {
+  background: #33e677;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+ol li::before {
+  content: counter(my-counter);
+  background: #231381;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20px;
+  display: inline-block;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+li button {
+  float: right;
+  padding: 5px;
+  font-size: 15px;
+  line-height: 15px;
+  margin-right: 15px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  justify-content: center;
+}
+
+
+gfg-div {
+
+  /* To make all elements center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Default Styling */
+  margin: 20px auto;
+  padding: 30px;
+  font-size: 30px;
+  width: 300px;
+  height: 300px;
+  background-color: darkseagreen;
+  color: black;
+}
+
+.fa {}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  .gfg-div {
+    background-color: #63c971;
+    color: #fff;
+  }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    color: black;
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .gfg-div {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: #fff;
+  }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+  .gfg-div {
+    width: 400px;
+    height: 200px;
+    background-color: cyan;
+    color: black;
+  }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+  .gfg-div {
+    width: 400px;
+    height: 200px;
+    background-color: chartreuse;
+    color: black;
+  }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: brown;
+    color: black;
+  }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: cornflowerblue;
+    color: black;
+  }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+  .gfg-div {
+    width: 400px;
+    height: 400px;
+    background-color: darkgoldenrod;
+    color: black;
+  }
+}
+
+;
+
+
+
+
+
+
+
+
+
+
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #000;
+}
+.wrapper{
+  height: 100px;
+  width: 360px;
+  position: relative;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 10px;
+  cursor: default;
+  animation: animate 1.5s linear infinite;
+}
+.wrapper .display,
+.wrapper span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .display{
+  z-index: 999;
+  height: 85px;
+  width: 345px;
+  background: #1b1b1b;
+  border-radius: 6px;
+  text-align: center;
+}
+.display #time{
+  line-height: 85px;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 1.5s linear infinite;
+}
+@keyframes animate {
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+.wrapper span{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: inherit;
+}
+.wrapper span:first-child{
+  filter: blur(7px);
+}
+.wrapper span:last-child{
+  filter: blur(20px);
+}
+.wrapper{
+  position: fixed;
+  top: 5px;
+}
